@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090d1b">
+<meta name="description" content="J E AI Explorer؛ راهنمای کشف ابزارهای هوش مصنوعی برای ویدیو، تصویر، صدا، موسیقی، نوشتن، تحقیق و برنامه‌نویسی.">
+<title>J E AI Explorer — کشف دنیای هوش مصنوعی</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+:root{--bg:#090d1b;--surface:#10182b;--surface2:#141f36;--text:#f3f6ff;--muted:#a7b2ca;--line:rgba(255,255,255,.09);--accent:#8c7cff;--accent2:#4ce0d0;--pink:#ff82c8;--good:#62e6a6;--warn:#ffd17b;--shadow:0 22px 65px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 12% 0%,rgba(111,91,255,.17),transparent 34%),radial-gradient(ellipse at 90% 22%,rgba(44,219,203,.08),transparent 30%),var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.75;min-height:100vh}body.light{--bg:#f3f5fc;--surface:#fff;--surface2:#f6f7ff;--text:#17213a;--muted:#64708b;--line:rgba(24,37,70,.12);--shadow:0 18px 50px rgba(43,56,95,.09);background:#f3f5fc}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}.wrap{width:min(1240px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:rgba(9,13,27,.86);backdrop-filter:blur(18px)}body.light header{background:rgba(255,255,255,.88)}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0}.brand{display:flex;align-items:center;gap:11px;min-width:0}.logo{width:46px;height:46px;flex-shrink:0;display:grid;place-items:center;border-radius:15px;color:#fff;font-size:17px;font-weight:900;background:linear-gradient(135deg,#8a73ff,#43dfd0);box-shadow:0 7px 28px rgba(111,93,255,.28)}.brand strong{display:block;font-size:17px;line-height:1.3}.brand strong span{color:var(--accent2)}.brand small{font-size:10px;color:var(--muted)}.navlinks{display:flex;gap:20px;align-items:center}.navlinks a{font-size:12px;color:var(--muted)}.navlinks a:hover{color:var(--accent2)}.navright{display:flex;gap:8px}.iconbtn{height:40px;min-width:40px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text)}
+.hero{position:relative;overflow:hidden;padding:76px 0 34px;text-align:center}.orb{position:absolute;pointer-events:none;border-radius:50%;filter:blur(2px);opacity:.5}.orb.one{width:180px;height:180px;right:7%;top:35px;background:radial-gradient(circle,rgba(139,124,255,.18),transparent 70%)}.orb.two{width:200px;height:200px;left:8%;bottom:0;background:radial-gradient(circle,rgba(72,229,212,.13),transparent 70%)}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 14px;border:1px solid rgba(76,224,208,.25);background:rgba(76,224,208,.07);color:var(--accent2);border-radius:40px;font-size:11px;position:relative}.hero h1{font-size:clamp(34px,5.5vw,66px);line-height:1.27;letter-spacing:-1.5px;margin:20px auto 16px;font-weight:900;position:relative}.gradient{background:linear-gradient(90deg,#50e3d4,#a99bff 52%,#ff8acb);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:720px;margin:auto;color:var(--muted);font-size:14px;position:relative}.actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin-top:26px;position:relative}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border:1px solid var(--line);border-radius:13px;font-size:12px;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(115deg,#7d6cff,#5368e8);border-color:transparent;color:#fff;box-shadow:0 9px 28px rgba(110,91,255,.2)}.secondary{background:var(--surface)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;max-width:900px;margin:25px auto 46px}.stat{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:17px;padding:15px}.stat strong{display:block;font-size:25px;color:var(--accent2);line-height:1.4}.stat span{font-size:11px;color:var(--muted)}
+.section{padding:32px 0 43px}.heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}.heading h2{font-size:clamp(22px,3vw,31px);margin:0;font-weight:900}.heading p{font-size:12px;color:var(--muted);margin:4px 0 0}.kicker{font-size:10px;letter-spacing:1.4px;color:var(--accent2);font-weight:800}.categorygrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.cat{width:100%;text-align:right;border:1px solid var(--line);border-radius:17px;padding:17px;background:linear-gradient(145deg,var(--surface2),var(--surface));color:var(--text);transition:.22s}.cat:hover,.cat.selected{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 30px rgba(80,70,160,.1)}.caticon{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:rgba(139,124,255,.12);font-size:22px;margin-bottom:10px}.cat b{display:block;font-size:12px}.cat small{display:block;color:var(--muted);font-size:10px;margin-top:4px}
+.catalog{border:1px solid var(--line);background:rgba(16,24,43,.74);border-radius:24px;padding:19px;box-shadow:var(--shadow)}body.light .catalog{background:rgba(255,255,255,.82)}.searchrow{display:grid;grid-template-columns:minmax(0,1fr) 180px 155px;gap:10px}.searchbox{position:relative}.searchbox span{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--muted)}.searchbox input,.catalog select{width:100%;min-height:48px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);padding:10px 14px;outline:none}.searchbox input{padding-right:44px}.catalog select option{background:var(--surface);color:var(--text)}.filterrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:14px}.pill{border:1px solid var(--line);border-radius:30px;padding:7px 12px;background:transparent;color:var(--muted);font-size:11px}.pill.active,.pill:hover{color:var(--text);background:rgba(139,124,255,.16);border-color:var(--accent)}.pill.reset{margin-right:auto}.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:11px;margin:19px 0 13px}.toolbar b{color:var(--text)}.toolgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.tool{min-width:0;position:relative;border:1px solid var(--line);border-radius:19px;padding:18px;background:linear-gradient(150deg,var(--surface2),var(--surface));transition:transform .2s,border-color .2s;overflow:hidden}.tool:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);opacity:0;transition:.2s}.tool:hover{transform:translateY(-3px);border-color:rgba(139,124,255,.55)}.tool:hover:before{opacity:1}.tooltop{display:flex;gap:11px;align-items:flex-start}.toolicon{width:48px;height:48px;flex-shrink:0;display:grid;place-items:center;border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:14px;font-size:24px}.tooltitle{flex:1;min-width:0}.tooltitle h3{font-size:15px;margin:0;overflow-wrap:anywhere}.tooltitle small{font-size:10px;color:var(--muted)}.heart{border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;padding:0 2px}.heart.saved{color:var(--pink)}.tool-desc{font-size:11px;color:var(--muted);min-height:57px;margin:15px 0 13px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}.tag{font-size:9px;padding:4px 8px;border-radius:7px;background:rgba(255,255,255,.055);color:var(--muted)}.tag.free{color:var(--good);background:rgba(98,230,166,.09)}.tag.limited{color:var(--warn);background:rgba(255,209,123,.09)}.toolfoot{display:flex;align-items:center;gap:7px}.visit{flex:1;text-align:center;border-radius:10px;padding:9px 8px;background:linear-gradient(110deg,#7869f7,#4e86ed);color:white;font-weight:800;font-size:11px}.detail,.comparebtn{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:10px;padding:8px 10px;font-size:10px}.comparebtn.checked{border-color:var(--accent2);color:var(--accent2);background:rgba(76,224,208,.08)}.empty{display:none;text-align:center;border:1px dashed var(--line);border-radius:18px;padding:48px 15px;color:var(--muted)}.empty div{font-size:34px}.empty h3{color:var(--text);margin:8px 0}
+.notice{display:flex;gap:13px;border:1px solid rgba(255,209,123,.23);background:rgba(255,209,123,.045);padding:19px;border-radius:17px}.notice .symbol{font-size:24px}.notice h3{font-size:13px;margin:0 0 4px}.notice p{font-size:11px;color:var(--muted);margin:0}
+.aboutgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.aboutcard{border:1px solid var(--line);background:var(--surface);border-radius:18px;padding:21px}.aboutcard .emoji{font-size:25px}.aboutcard h3{font-size:14px;margin:9px 0 4px}.aboutcard p{font-size:11px;color:var(--muted);margin:0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{border:1px solid var(--line);border-radius:15px;padding:16px;background:var(--surface)}.step strong{display:block;color:var(--accent2);font-size:11px}.step p{font-size:11px;color:var(--muted);margin:5px 0 0}
+footer{border-top:1px solid var(--line);padding:30px 0 18px;background:rgba(3,6,14,.28)}body.light footer{background:#fff}.footrow{display:flex;justify-content:space-between;align-items:flex-start;gap:25px;flex-wrap:wrap}.footdesc{max-width:430px;font-size:11px;color:var(--muted);margin-top:10px}.footlinks{display:flex;gap:15px;flex-wrap:wrap}.footlinks a{font-size:11px;color:var(--muted)}.footlinks a:hover{color:var(--accent2)}.copyright{text-align:center;border-top:1px solid var(--line);padding-top:16px;margin-top:22px;color:var(--muted);font-size:10px}
+.modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.72);padding:18px;align-items:center;justify-content:center}.modal.open{display:flex}.modalbox{width:min(560px,100%);max-height:85vh;overflow:auto;border:1px solid var(--line);background:var(--surface);border-radius:22px;padding:23px;box-shadow:var(--shadow)}.modalhead{display:flex;justify-content:space-between;align-items:center;gap:12px}.modalhead h3{margin:0;font-size:21px}.close{font-size:26px;background:transparent;border:0;color:var(--text)}.modalbody{font-size:12px;color:var(--muted);white-space:pre-line}.modalbody strong{color:var(--text)}.modalactions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.toast{position:fixed;bottom:18px;left:18px;z-index:200;background:var(--surface2);border:1px solid var(--line);padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;display:none}.toast.show{display:block;animation:pop .2s ease}@keyframes pop{from{transform:translateY(8px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(max-width:1000px){.categorygrid{grid-template-columns:repeat(3,minmax(0,1fr))}.toolgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{gap:12px}.searchrow{grid-template-columns:minmax(0,1fr) 150px}.searchrow select:last-child{grid-column:1/-1}}
+@media(max-width:700px){.navlinks{display:none}.hero{padding-top:54px}.stats{grid-template-columns:repeat(2,1fr);margin-bottom:28px}.categorygrid{grid-template-columns:repeat(2,minmax(0,1fr))}.toolgrid{grid-template-columns:1fr}.searchrow{grid-template-columns:1fr}.searchrow select:last-child{grid-column:auto}.aboutgrid,.steps{grid-template-columns:1fr}.heading{align-items:flex-start;flex-direction:column}.catalog{padding:12px}.tool-desc{min-height:0}.brand strong{font-size:14px}.brand small{font-size:9px}.logo{width:41px;height:41px}.toolbar{align-items:flex-start;flex-direction:column}.pill.reset{margin-right:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="J E AI Explorer صفحه اصلی">
+      <div class="logo">JE</div><div><strong>J E <span>AI Explorer</span></strong><small>EXPLORE THE WORLD OF AI</small></div>
+    </a>
+    <nav class="navlinks" aria-label="منوی اصلی">
+      <a href="#home">خانه</a><a href="#categories">دسته‌بندی‌ها</a><a href="#tools">کتابخانه ابزارها</a><a href="#guide">راهنما</a><a href="#about">درباره ما</a>
+    </nav>
+    <div class="navright">
+      <button class="iconbtn" id="themeBtn" aria-label="تغییر پوسته" title="تغییر پوسته">☀️</button>
+      <button class="iconbtn" id="favoritesTop" aria-label="نمایش علاقه‌مندی‌ها" title="علاقه‌مندی‌ها">♡</button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero wrap">
+  <div class="orb one"></div><div class="orb two"></div>
+  <div class="eyebrow">✦ راهنمای هوشمند ابزارهای هوش مصنوعی</div>
+  <h1>ایده‌هایت را به واقعیت تبدیل کن<br><span class="gradient">با قدرت هوش مصنوعی</span></h1>
+  <p>در J E AI Explorer ابزارهای هوش مصنوعی را برای ساخت ویدیو، تولید تصویر، موسیقی، صدا، نوشتن، تحقیق و برنامه‌نویسی کشف کن. کاربرد هر ابزار را بخوان، گزینه‌ها را مقایسه کن و به وب‌سایت رسمی آن برو.</p>
+  <div class="actions"><a class="btn primary" href="#tools">✦ کشف کتابخانه ابزارها</a><button class="btn secondary" id="surpriseBtn">🎲 یک ابزار تصادفی</button></div>
+</section>
+
+<section class="wrap" aria-label="آمار وب‌سایت">
+  <div class="stats">
+    <div class="stat"><strong id="statTools">۰</strong><span>ابزار در کتابخانه</span></div>
+    <div class="stat"><strong id="statCats">۰</strong><span>دسته‌بندی تخصصی</span></div>
+    <div class="stat"><strong id="statFav">۰</strong><span>موردعلاقه‌های ذخیره‌شده</span></div>
+    <div class="stat"><strong>۲۴/۷</strong><span>دسترسی به فهرست وب‌سایت</span></div>
+  </div>
+</section>
+
+<section class="section wrap" id="categories">
+  <div class="heading"><div><div class="kicker">EXPLORE BY CATEGORY</div><h2>از کجا شروع کنیم؟</h2><p>یک دسته را انتخاب کن تا ابزارهای مربوط به آن نمایش داده شوند.</p></div></div>
+  <div class="categorygrid" id="categoryGrid"></div>
+</section>
+
+<section class="section wrap" id="tools">
+  <div class="heading"><div><div class="kicker">THE AI DIRECTORY</div><h2>کتابخانه ابزارهای هوش مصنوعی</h2><p>جست‌وجو، فیلتر، مرتب‌سازی، ذخیره و مقایسه ابزارها در یک مکان.</p></div><button class="btn secondary" id="resetAll">↺ پاک‌کردن فیلترها</button></div>
+  <div class="catalog">
+    <div class="searchrow">
+      <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="جست‌وجو: مثلاً ساخت آهنگ، ویدیو، ترجمه..." aria-label="جست‌وجوی ابزارها"></label>
+      <select id="sortSelect" aria-label="مرتب‌سازی"><option value="featured">پیشنهادی</option><option value="az">نام ابزار: الف تا ی</option><option value="za">نام ابزار: ی تا الف</option><option value="category">بر اساس دسته‌بندی</option></select>
+      <select id="categorySelect" aria-label="انتخاب دسته"><option value="all">همه دسته‌ها</option></select>
+    </div>
+    <div class="filterrow" id="filterRow">
+      <button class="pill active" data-filter="all">همه ابزارها</button>
+      <button class="pill" data-filter="free">دارای گزینه رایگان</button>
+      <button class="pill" data-filter="limited">رایگان با محدودیت</button>
+      <button class="pill" data-filter="favorites">♥ موردعلاقه‌ها</button>
+      <button class="pill" data-filter="compare">⚖ انتخاب‌شده برای مقایسه</button>
+      <button class="pill reset" id="clearSearch">پاک‌کردن جست‌وجو ×</button>
+    </div>
+  </div>
+  <div class="toolbar"><span id="resultCount" aria-live="polite">در حال بارگذاری...</span><span id="compareStatus">برای مقایسه، حداکثر ۳ ابزار انتخاب کن.</span></div>
+  <div class="toolgrid" id="toolGrid"></div>
+  <div class="empty" id="empty"><div>⌕</div><h3>نتیجه‌ای پیدا نشد</h3><p>عبارت دیگری جست‌وجو کن یا فیلترها را پاک کن.</p><button class="btn secondary" id="emptyReset">نمایش همه ابزارها</button></div>
+  <div class="actions" style="margin-top:20px"><button class="btn primary" id="compareNow">⚖ مقایسه ابزارهای انتخاب‌شده</button></div>
+</section>
+
+<section class="section wrap" id="guide">
+  <div class="heading"><div><div class="kicker">QUICK GUIDE</div><h2>چطور ابزار مناسب را انتخاب کنی؟</h2><p>قبل از ساخت حساب یا پرداخت پول، این موارد را بررسی کن.</p></div></div>
+  <div class="steps">
+    <div class="step"><strong>مرحله ۰۱</strong><p>هدفت را مشخص کن: ویدیو، تصویر، صدا، نوشتن یا کار دیگری؟</p></div>
+    <div class="step"><strong>مرحله ۰۲</strong><p>برچسب طرح رایگان را ببین؛ رایگان بودن ممکن است محدودیت داشته باشد.</p></div>
+    <div class="step"><strong>مرحله ۰۳</strong><p>در سایت رسمی، سهمیه، واترمارک، زبان‌های پشتیبانی‌شده و شرایط استفاده را بخوان.</p></div>
+    <div class="step"><strong>مرحله ۰۴</strong><p>با یک پروژه ساده امتحان کن و سپس درباره استفاده بیشتر تصمیم بگیر.</p></div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="notice"><div class="symbol">⚠️</div><div><h3>اطلاعات قیمت و طرح‌ها ممکن است تغییر کند</h3><p>این وب‌سایت یک فهرست مستقل است. برچسب «دارای گزینه رایگان» به معنی رایگان بودن همه قابلیت‌ها یا استفاده نامحدود نیست. بعضی سرویس‌ها اعتبار آزمایشی، سهمیه محدود، واترمارک، نیاز به حساب کاربری یا محدودیت منطقه‌ای دارند. قبل از ثبت‌نام، اطلاعات روز را در وب‌سایت رسمی بررسی کن. هرگز رمز عبور یا اطلاعات پرداختت را در این سایت وارد نکن.</p></div></div>
+</section>
+
+<section class="section wrap" id="about">
+  <div class="heading"><div><div class="kicker">ABOUT THE PROJECT</div><h2>درباره J E AI Explorer</h2><p>یک نقطه شروع برای آشنایی با دنیای ابزارهای هوش مصنوعی.</p></div></div>
+  <div class="aboutgrid">
+    <article class="aboutcard"><div class="emoji">🔎</div><h3>کشف آسان</h3><p>ابزارها را با نام، کاربرد یا دسته‌بندی پیدا کن؛ لازم نیست هر بار از صفر جست‌وجو کنی.</p></article>
+    <article class="aboutcard"><div class="emoji">♥</div><h3>فهرست شخصی</h3><p>ابزارهای دلخواهت را ذخیره کن. علاقه‌مندی‌ها در همین مرورگر نگه‌داری می‌شوند.</p></article>
+    <article class="aboutcard"><div class="emoji">⚖️</div><h3>مقایسه سریع</h3><p>تا سه ابزار را انتخاب کن تا کاربرد، دسته و وضعیت طرح رایگان آن‌ها را کنار هم ببینی.</p></article>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><div class="footrow">
+  <div><a class="brand" href="#home"><div class="logo">JE</div><div><strong>J E <span style="color:var(--accent2)">AI Explorer</span></strong><small>EXPLORE THE WORLD OF AI</small></div></a><p class="footdesc">ابزارهای مفید هوش مصنوعی را کشف کن، با آگاهی انتخاب کن و برای استفاده به سایت رسمی ارائه‌دهنده برو.</p></div>
+  <div class="footlinks"><a href="#home">خانه</a><a href="#categories">دسته‌بندی‌ها</a><a href="#tools">ابزارها</a><a href="#guide">راهنما</a><a href="#about">درباره ما</a></div>
+</div><div class="copyright">© <span id="year"></span> J E AI Explorer — یک فهرست مستقل؛ نام‌ها و نشان‌های تجاری متعلق به صاحبان آن‌ها هستند.</div></div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalbox"><div class="modalhead"><h3 id="modalTitle">جزئیات ابزار</h3><button class="close" id="closeModal" aria-label="بستن">×</button></div><div class="modalbody" id="modalBody"></div><div class="modalactions"><a class="btn primary" id="modalVisit" target="_blank" rel="noopener noreferrer">رفتن به سایت رسمی ↗</a><button class="btn secondary" id="modalFavorite">♡ ذخیره در علاقه‌مندی‌ها</button></div></div></div>
+<div class="modal" id="compareModal" role="dialog" aria-modal="true" aria-labelledby="compareTitle"><div class="modalbox"><div class="modalhead"><h3 id="compareTitle">مقایسه ابزارها</h3><button class="close" id="closeCompare" aria-label="بستن">×</button></div><div id="compareBody"></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+const categories=[
+{id:"chat",name:"چت و دستیار هوشمند",icon:"🤖",desc:"پرسش، پاسخ و کمک روزمره"},
+{id:"video",name:"ساخت و ویرایش ویدیو",icon:"🎬",desc:"ویدیو از متن، تصویر و کلیپ"},
+{id:"image",name:"تصویر و طراحی",icon:"🎨",desc:"تولید تصویر و طرح گرافیکی"},
+{id:"audio",name:"صدا و گویندگی",icon:"🎙️",desc:"گویندگی، تبدیل متن به صدا"},
+{id:"music",name:"موسیقی و آهنگ",icon:"🎵",desc:"ساخت آهنگ و ایده موسیقی"},
+{id:"writing",name:"نوشتن و ترجمه",icon:"✍️",desc:"متن، بازنویسی و زبان"},
+{id:"coding",name:"برنامه‌نویسی",icon:"💻",desc:"ساخت و اصلاح کد"},
+{id:"research",name:"تحقیق و آموزش",icon:"📚",desc:"مطالعه، منابع و یادگیری"},
+{id:"design",name:"ارائه و طراحی",icon:"📊",desc:"اسلاید، طرح و نمونه اولیه"},
+{id:"productivity",name:"کار و بهره‌وری",icon:"⚙️",desc:"یادداشت، سازمان‌دهی و کار تیمی"}
+];
+/* status=free means the listed core service has a free-to-use option; limited means a free tier/trial exists but has notable limits. Verify terms on official websites. */
+const tools=[
+{name:"ChatGPT",icon:"🤖",category:"chat",status:"limited",desc:"دستیار عمومی برای پرسش‌وپاسخ، نوشتن، یادگیری، ایده‌پردازی و کار با فایل‌ها؛ بعضی قابلیت‌ها محدودند.",url:"https://chatgpt.com/",note:"طرح رایگان با محدودیت پیام و امکانات"},
+{name:"Google Gemini",icon:"♊",category:"chat",status:"limited",desc:"دستیار گوگل برای پاسخ‌گویی، نوشتن، ایده‌پردازی و بعضی کارهای چندرسانه‌ای.",url:"https://gemini.google.com/",note:"امکانات و سهمیه بسته به طرح و منطقه فرق می‌کند"},
+{name:"Claude",icon:"🧠",category:"chat",status:"limited",desc:"دستیار برای نوشتن، خلاصه‌سازی، تحلیل و کار با متن‌های طولانی.",url:"https://claude.ai/",note:"طرح رایگان با محدودیت استفاده و دسترسی منطقه‌ای"},
+{name:"Microsoft Copilot",icon:"✨",category:"chat",status:"limited",desc:"دستیار هوشمند برای پرسش‌وپاسخ، نوشتن و کمک به کارهای روزمره.",url:"https://copilot.microsoft.com/",note:"برخی امکانات به حساب و منطقه بستگی دارند"},
+{name:"DeepSeek",icon:"🔎",category:"chat",status:"limited",desc:"دستیار هوش مصنوعی برای پاسخ‌گویی، استدلال و کمک در کدنویسی.",url:"https://chat.deepseek.com/",note:"دسترسی و محدودیت‌ها را در سایت رسمی بررسی کن"},
+{name:"Poe",icon:"💬",category:"chat",status:"limited",desc:"محیطی برای امتحان‌کردن چندین دستیار و بات هوش مصنوعی.",url:"https://poe.com/",note:"سهمیه رایگان محدود"},
+{name:"HuggingChat",icon:"🤗",category:"chat",status:"free",desc:"رابط گفت‌وگو برای تجربه مدل‌های هوش مصنوعی باز؛ مدل‌ها و دسترسی ممکن است تغییر کنند.",url:"https://huggingface.co/chat/",note:"دسترسی به مدل‌ها ممکن است متغیر باشد"},
+{name:"Character.AI",icon:"🎭",category:"chat",status:"limited",desc:"گفت‌وگو با شخصیت‌ها و بات‌های ساخته‌شده توسط کاربران.",url:"https://character.ai/",note:"امکانات و شرایط استفاده را بررسی کن"},
+{name:"Perplexity",icon:"🔍",category:"research",status:"limited",desc:"جست‌وجوی هوشمند برای یافتن پاسخ همراه با پیوند به منابع.",url:"https://www.perplexity.ai/",note:"جست‌وجوی رایگان؛ برخی امکانات پیشرفته محدود"},
+{name:"NotebookLM",icon:"📚",category:"research",status:"limited",desc:"مطالعه منابع خودت، خلاصه‌سازی و پاسخ‌گویی بر اساس فایل‌ها و اسناد واردشده.",url:"https://notebooklm.google.com/",note:"سهمیه و قابلیت‌ها ممکن است تغییر کنند"},
+{name:"Google Scholar",icon:"🎓",category:"research",status:"free",desc:"جست‌وجوی مقاله‌های علمی، پژوهش‌ها و منابع دانشگاهی.",url:"https://scholar.google.com/",note:"جست‌وجو رایگان؛ بعضی مقاله‌ها پولی‌اند"},
+{name:"Elicit",icon:"🧪",category:"research",status:"limited",desc:"کمک به مرور پژوهش‌های علمی و استخراج اطلاعات از مقاله‌ها.",url:"https://elicit.com/",note:"طرح رایگان با محدودیت"},
+{name:"Consensus",icon:"📑",category:"research",status:"limited",desc:"موتور جست‌وجوی پژوهشی برای یافتن یافته‌های علمی مرتبط با پرسش‌ها.",url:"https://consensus.app/",note:"جست‌وجو و امکانات رایگان محدود"},
+{name:"SciSpace",icon:"🔬",category:"research",status:"limited",desc:"ابزارهایی برای خواندن، فهمیدن و بررسی مقاله‌های علمی.",url:"https://scispace.com/",note:"بعضی قابلیت‌ها محدود یا پولی‌اند"},
+{name:"Khan Academy Khanmigo",icon:"🧑‍🏫",category:"research",status:"limited",desc:"ابزارهای آموزشی و کمک به یادگیری در اکوسیستم Khan Academy.",url:"https://www.khanacademy.org/khan-labs",note:"دسترسی و قیمت به منطقه و محصول بستگی دارد"},
+{name:"Runway",icon:"🎬",category:"video",status:"limited",desc:"تولید و ویرایش ویدیو و ابزارهای خلاقانه مبتنی بر هوش مصنوعی.",url:"https://runwayml.com/",note:"اعتبار و امکانات رایگان محدود"},
+{name:"Pika",icon:"🎞️",category:"video",status:"limited",desc:"ساخت ویدیوهای کوتاه و افکت‌های خلاقانه با هوش مصنوعی.",url:"https://pika.art/",note:"سهمیه و قابلیت‌های رایگان ممکن است تغییر کند"},
+{name:"Kling AI",icon:"🎥",category:"video",status:"limited",desc:"ساخت ویدیو از متن یا تصویر و تولید حرکت‌های سینمایی.",url:"https://klingai.com/",note:"اعتبار و دسترسی منطقه‌ای را بررسی کن"},
+{name:"Luma Dream Machine",icon:"🌌",category:"video",status:"limited",desc:"تولید ویدیو از متن و تصویر با تمرکز بر حرکت و نماهای سینمایی.",url:"https://lumalabs.ai/dream-machine",note:"سهمیه رایگان و شرایط ممکن است تغییر کند"},
+{name:"InVideo AI",icon:"📽️",category:"video",status:"limited",desc:"تبدیل ایده یا متن به ویدیوهای آماده تدوین و انتشار.",url:"https://invideo.io/",note:"طرح رایگان ممکن است واترمارک یا محدودیت داشته باشد"},
+{name:"VEED",icon:"✂️",category:"video",status:"limited",desc:"ویرایش آنلاین ویدیو، زیرنویس و ابزارهای تولید محتوای ویدیویی.",url:"https://www.veed.io/",note:"خروجی رایگان و امکانات محدود"},
+{name:"CapCut",icon:"🎞️",category:"video",status:"limited",desc:"ویرایش ویدیو برای شبکه‌های اجتماعی با قالب‌ها و امکانات هوشمند.",url:"https://www.capcut.com/",note:"بعضی قالب‌ها و قابلیت‌ها پولی‌اند"},
+{name:"Clipchamp",icon:"📹",category:"video",status:"limited",desc:"ویرایشگر ویدیویی آنلاین با امکانات ضبط و آماده‌سازی کلیپ.",url:"https://clipchamp.com/",note:"امکانات و خروجی به طرح و نوع دارایی بستگی دارد"},
+{name:"Canva Video",icon:"🪄",category:"video",status:"limited",desc:"ساخت و ویرایش ویدیو با قالب‌ها و ابزارهای طراحی Canva.",url:"https://www.canva.com/",note:"برخی دارایی‌ها و امکانات پولی‌اند"},
+{name:"Adobe Firefly",icon:"🖌️",category:"image",status:"limited",desc:"تولید و ویرایش تصویر با ابزارهای هوش مصنوعی Adobe.",url:"https://firefly.adobe.com/",note:"اعتبار رایگان محدود"},
+{name:"Leonardo AI",icon:"🖼️",category:"image",status:"limited",desc:"تولید تصویر، طرح مفهومی و دارایی‌های بصری برای پروژه‌های خلاقانه.",url:"https://leonardo.ai/",note:"سهمیه رایگان ممکن است تغییر کند"},
+{name:"Ideogram",icon:"🔤",category:"image",status:"limited",desc:"تولید تصویر و طرح‌هایی که می‌توانند نوشته و تایپوگرافی داشته باشند.",url:"https://ideogram.ai/",note:"طرح رایگان محدود"},
+{name:"Microsoft Designer",icon:"🌈",category:"image",status:"limited",desc:"کمک به ساخت طرح‌های گرافیکی و تصویر برای محتواهای مختلف.",url:"https://designer.microsoft.com/",note:"امکانات وابسته به حساب و منطقه است"},
+{name:"Playground",icon:"🧩",category:"image",status:"limited",desc:"ابزار آنلاین تولید و ویرایش تصاویر با هوش مصنوعی.",url:"https://playground.com/",note:"محدودیت‌های طرح رایگان را بررسی کن"},
+{name:"Craiyon",icon:"🖍️",category:"image",status:"limited",desc:"تولید تصویر از توضیحات متنی با رابط ساده.",url:"https://www.craiyon.com/",note:"ممکن است تبلیغات یا محدودیت داشته باشد"},
+{name:"Pixlr",icon:"🪄",category:"image",status:"limited",desc:"ویرایش تصویر و ابزارهای خلاقانه آنلاین، همراه با برخی قابلیت‌های هوش مصنوعی.",url:"https://pixlr.com/",note:"برخی امکانات و استفاده‌ها محدودند"},
+{name:"Remove.bg",icon:"✂️",category:"image",status:"limited",desc:"حذف خودکار پس‌زمینه عکس؛ خروجی با وضوح بالا ممکن است محدود باشد.",url:"https://www.remove.bg/",note:"پیش‌نمایش رایگان؛ وضوح بالا ممکن است پولی باشد"},
+{name:"Photopea",icon:"🖼️",category:"image",status:"free",desc:"ویرایشگر تصویر آنلاین با ابزارهای پیشرفته؛ بیشتر امکانات اصلی رایگان‌اند.",url:"https://www.photopea.com/",note:"رایگان با تبلیغات؛ برخی خدمات ممکن است جدا باشند"},
+{name:"Canva",icon:"🎨",category:"design",status:"limited",desc:"ساخت پوستر، لوگو، ارائه و محتوای شبکه‌های اجتماعی با قالب‌های آماده.",url:"https://www.canva.com/",note:"محتوای Pro و بعضی قابلیت‌ها پولی‌اند"},
+{name:"Figma",icon:"🧱",category:"design",status:"limited",desc:"طراحی رابط کاربری، نمونه اولیه و همکاری روی طرح‌های دیجیتال.",url:"https://www.figma.com/",note:"طرح رایگان و محدودیت‌های فضای کاری"},
+{name:"Gamma",icon:"📊",category:"design",status:"limited",desc:"کمک به ساخت ارائه، صفحه و سندهای بصری از ایده یا متن.",url:"https://gamma.app/",note:"اعتبار رایگان محدود"},
+{name:"Beautiful.ai",icon:"📈",category:"design",status:"limited",desc:"ساخت ارائه‌های حرفه‌ای با چیدمان‌های خودکار.",url:"https://www.beautiful.ai/",note:"ممکن است بیشتر به آزمایش یا طرح پولی متکی باشد"},
+{name:"Excalidraw",icon:"✏️",category:"design",status:"free",desc:"ساخت نمودارها و طرح‌های دستی ساده در مرورگر؛ پروژه متن‌باز.",url:"https://excalidraw.com/",note:"امکانات اصلی رایگان‌اند"},
+{name:"ElevenLabs",icon:"🎙️",category:"audio",status:"limited",desc:"تبدیل متن به گفتار، تولید صدا و ابزارهای صوتی هوش مصنوعی.",url:"https://elevenlabs.io/",note:"طرح رایگان محدود؛ مجوز استفاده را بررسی کن"},
+{name:"Adobe Podcast",icon:"🎧",category:"audio",status:"limited",desc:"بهبود وضوح صدا و کمک به آماده‌سازی ضبط‌های گفتاری.",url:"https://podcast.adobe.com/",note:"امکانات رایگان ممکن است محدود باشند"},
+{name:"TTSMaker",icon:"🗣️",category:"audio",status:"limited",desc:"تبدیل متن به گفتار در زبان‌ها و صداهای پشتیبانی‌شده.",url:"https://ttsmaker.com/",note:"محدودیت حجم و شرایط استفاده را بررسی کن"},
+{name:"Narakeet",icon:"🔊",category:"audio",status:"limited",desc:"تبدیل متن و فایل‌های ارائه به صدا یا ویدیوهای گویندگی.",url:"https://www.narakeet.com/",note:"نمونه رایگان محدود؛ خروجی بیشتر ممکن است پولی باشد"},
+{name:"Auphonic",icon:"🎚️",category:"audio",status:"limited",desc:"تنظیم بلندی صدا و پردازش خودکار فایل‌های صوتی و پادکست.",url:"https://auphonic.com/",note:"سهمیه رایگان ماهانه محدود"},
+{name:"Suno",icon:"🎵",category:"music",status:"limited",desc:"ساخت آهنگ و موسیقی با توضیحات متنی و انتخاب سبک.",url:"https://suno.com/",note:"سهمیه رایگان محدود؛ حقوق استفاده را بررسی کن"},
+{name:"Udio",icon:"🎼",category:"music",status:"limited",desc:"ساخت ایده‌های موسیقی و آهنگ با کمک هوش مصنوعی.",url:"https://www.udio.com/",note:"طرح‌ها و شرایط فعلی ممکن است تغییر کنند"},
+{name:"BandLab",icon:"🎹",category:"music",status:"limited",desc:"استودیوی آنلاین برای ضبط، تنظیم و ساخت موسیقی؛ برخی ابزارهای هوشمند نیز دارد.",url:"https://www.bandlab.com/",note:"قابلیت‌ها و دارایی‌های عضویتی ممکن است محدود باشند"},
+{name:"Soundraw",icon:"🎶",category:"music",status:"limited",desc:"تولید موسیقی پس‌زمینه برای ویدیوها و پروژه‌های محتوایی.",url:"https://soundraw.io/",note:"دانلود و مجوز استفاده ممکن است نیاز به پرداخت داشته باشد"},
+{name:"AIVA",icon:"🎻",category:"music",status:"limited",desc:"ساخت قطعه‌های موسیقی با کمک هوش مصنوعی.",url:"https://www.aiva.ai/",note:"طرح رایگان و مجوزهای آن محدودند"},
+{name:"Grammarly",icon:"📝",category:"writing",status:"limited",desc:"بررسی دستور زبان و بهبود نوشتار انگلیسی.",url:"https://www.grammarly.com/",note:"قابلیت‌های پیشرفته پولی‌اند"},
+{name:"QuillBot",icon:"📄",category:"writing",status:"limited",desc:"بازنویسی، خلاصه‌سازی و کمک به اصلاح متن.",url:"https://quillbot.com/",note:"نسخه رایگان محدودیت دارد"},
+{name:"DeepL Translator",icon:"🌐",category:"writing",status:"limited",desc:"ترجمه متن میان زبان‌های پشتیبانی‌شده.",url:"https://www.deepl.com/translator",note:"محدودیت‌ها و زبان‌های قابل‌دسترسی را بررسی کن"},
+{name:"LanguageTool",icon:"🔠",category:"writing",status:"limited",desc:"بررسی املا، دستور زبان و سبک نوشتن در زبان‌های پشتیبانی‌شده.",url:"https://languagetool.org/",note:"نسخه رایگان محدود"},
+{name:"Hemingway Editor",icon:"📘",category:"writing",status:"limited",desc:"کمک به ساده‌تر و خواناتر کردن متن انگلیسی.",url:"https://hemingwayapp.com/",note:"نسخه وب و امکانات ممکن است تغییر کنند"},
+{name:"Google Translate",icon:"🌍",category:"writing",status:"free",desc:"ترجمه متن و برخی محتواهای تصویری یا گفتاری میان زبان‌های پشتیبانی‌شده.",url:"https://translate.google.com/",note:"رایگان؛ کیفیت و قابلیت‌ها بسته به زبان فرق می‌کند"},
+{name:"GitHub Copilot",icon:"💻",category:"coding",status:"limited",desc:"کمک به نوشتن، تکمیل و توضیح کد در محیط‌های برنامه‌نویسی.",url:"https://github.com/features/copilot",note:"طرح رایگان محدود و شرایط واجدشرایط بودن"},
+{name:"Replit",icon:"🧩",category:"coding",status:"limited",desc:"محیط آنلاین ساخت و اجرای برنامه و وب‌سایت با کمک ابزارهای هوشمند.",url:"https://replit.com/",note:"فضای کاری و امکانات AI ممکن است محدود باشند"},
+{name:"Bolt.new",icon:"⚡",category:"coding",status:"limited",desc:"ساخت نمونه وب‌سایت و برنامه با توضیحات زبان طبیعی.",url:"https://bolt.new/",note:"اعتبار رایگان محدود"},
+{name:"Lovable",icon:"💜",category:"coding",status:"limited",desc:"کمک به ساخت برنامه‌های وب با دستورهای متنی.",url:"https://lovable.dev/",note:"پیام‌ها یا اعتبارهای رایگان محدودند"},
+{name:"CodePen",icon:"🖥️",category:"coding",status:"limited",desc:"محیط آنلاین برای آزمایش و نمایش HTML، CSS و JavaScript.",url:"https://codepen.io/",note:"امکانات پایه رایگان؛ قابلیت‌های حرفه‌ای پولی‌اند"},
+{name:"JSFiddle",icon:"🧪",category:"coding",status:"free",desc:"آزمایش سریع کدهای HTML، CSS و JavaScript در مرورگر.",url:"https://jsfiddle.net/",note:"امکانات اصلی رایگان‌اند"},
+{name:"StackBlitz",icon:"⚙️",category:"coding",status:"limited",desc:"محیط توسعه وب در مرورگر برای ساخت و آزمایش پروژه‌ها.",url:"https://stackblitz.com/",note:"سهمیه‌ها و امکانات بسته به پروژه و طرح فرق می‌کند"},
+{name:"Hugging Face",icon:"🤗",category:"coding",status:"free",desc:"پلتفرم مدل‌های باز، مجموعه‌داده‌ها و برنامه‌های نمایشی هوش مصنوعی.",url:"https://huggingface.co/",note:"بسیاری از منابع رایگان‌اند؛ برخی پردازش‌ها هزینه دارند"},
+{name:"Google AI Studio",icon:"🧠",category:"coding",status:"limited",desc:"آزمایش مدل‌های Gemini و ساخت نمونه‌های اولیه با API.",url:"https://aistudio.google.com/",note:"دسترسی و سهمیه به منطقه و شرایط سرویس بستگی دارد"},
+{name:"Vercel",icon:"▲",category:"coding",status:"limited",desc:"میزبانی و انتشار پروژه‌های وب و ابزارهای توسعه.",url:"https://vercel.com/",note:"طرح رایگان با شرایط استفاده مشخص"},
+{name:"GitHub Pages",icon:"🐙",category:"coding",status:"free",desc:"انتشار رایگان وب‌سایت‌های ایستا از مخزن GitHub.",url:"https://pages.github.com/",note:"برای وب‌سایت‌های ایستا؛ محدودیت‌های سرویس را بخوان"},
+{name:"Google Docs",icon:"📃",category:"productivity",status:"free",desc:"ساخت و ویرایش اسناد آنلاین و همکاری با دیگران.",url:"https://docs.google.com/",note:"امکانات پایه رایگان با حساب گوگل"},
+{name:"Notion",icon:"📓",category:"productivity",status:"limited",desc:"یادداشت‌برداری، مدیریت پروژه و سازمان‌دهی اطلاعات.",url:"https://www.notion.so/",note:"طرح رایگان؛ برخی قابلیت‌های AI محدود یا پولی‌اند"},
+{name:"Trello",icon:"🗂️",category:"productivity",status:"limited",desc:"مدیریت کارها و پروژه‌ها با تخته‌ها و کارت‌ها.",url:"https://trello.com/",note:"طرح رایگان با محدودیت‌های مشخص"},
+{name:"Zapier",icon:"🔗",category:"productivity",status:"limited",desc:"اتصال برنامه‌ها و خودکارسازی بعضی کارهای تکراری.",url:"https://zapier.com/",note:"تعداد کارهای رایگان محدود"},
+{name:"Make",icon:"🧩",category:"productivity",status:"limited",desc:"ساخت گردش‌کارهای خودکار میان سرویس‌ها و برنامه‌ها.",url:"https://www.make.com/",note:"اعتبار یا عملیات رایگان محدود"},
+{name:"Otter.ai",icon:"🗒️",category:"productivity",status:"limited",desc:"تبدیل گفتار و جلسه به متن در زبان‌ها و شرایط پشتیبانی‌شده.",url:"https://otter.ai/",note:"سهمیه رایگان محدود و پشتیبانی زبان را بررسی کن"},
+{name:"Fireflies.ai",icon:"🪰",category:"productivity",status:"limited",desc:"کمک به ثبت، متن‌سازی و خلاصه‌سازی جلسه‌های آنلاین.",url:"https://fireflies.ai/",note:"طرح رایگان با محدودیت و شرایط حریم خصوصی"},
+{name:"Zapier Central",icon:"🤖",category:"productivity",status:"limited",desc:"ابزارهای خودکارسازی مبتنی بر هوش مصنوعی در اکوسیستم Zapier.",url:"https://zapier.com/",note:"قابلیت‌ها و طرح‌ها تغییرپذیرند"}
+];
+const $=id=>document.getElementById(id);
+const FAVKEY="jeaie_favorites_v2", CMPKEY="jeaie_compare_v2", THEMEKEY="jeaie_theme_v2";
+let favorites=readArray(FAVKEY),compare=readArray(CMPKEY),activeCategory="all",activeFilter="all",modalTool=null,toastTimer;
+function readArray(key){try{const v=JSON.parse(localStorage.getItem(key)||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function persist(){try{localStorage.setItem(FAVKEY,JSON.stringify(favorites));localStorage.setItem(CMPKEY,JSON.stringify(compare))}catch(e){}}
+function category(id){return categories.find(c=>c.id===id)||{name:"سایر",icon:"✨",desc:""}}
+function statusLabel(t){return t.status==="free"?"گزینه رایگان":"رایگان با محدودیت"}
+function toast(message){$("toast").textContent=message;$("toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").classList.remove("show"),2600)}
+function renderCategories(){
+ $("categoryGrid").replaceChildren();
+ categories.forEach(c=>{const b=document.createElement("button");b.className="cat"+(activeCategory===c.id?" selected":"");b.type="button";b.innerHTML=`<span class="caticon">${c.icon}</span><b></b><small></small>`;b.querySelector("b").textContent=c.name;b.querySelector("small").textContent=c.desc;b.addEventListener("click",()=>{activeCategory=activeCategory===c.id?"all":c.id;$("categorySelect").value=activeCategory;renderCategories();renderTools();$("tools").scrollIntoView({behavior:"smooth"})});$("categoryGrid").appendChild(b)});
+ $("categorySelect").replaceChildren(new Option("همه دسته‌ها","all"));categories.forEach(c=>$("categorySelect").add(new Option(c.name,c.id)));
+}
+function matches(t){
+ const q=$("searchInput").value.trim().toLocaleLowerCase("fa");
+ const hay=[t.name,t.desc,t.note,category(t.category).name,t.category].join(" ").toLocaleLowerCase("fa");
+ if(q&&!hay.includes(q))return false;
+ if(activeCategory!=="all"&&t.category!==activeCategory)return false;
+ if(activeFilter==="free"&&t.status!=="free")return false;
+ if(activeFilter==="limited"&&t.status!=="limited")return false;
+ if(activeFilter==="favorites"&&!favorites.includes(t.name))return false;
+ if(activeFilter==="compare"&&!compare.includes(t.name))return false;
+ return true;
+}
+function renderTools(){
+ let list=tools.filter(matches),sort=$("sortSelect").value;
+ if(sort==="az")list.sort((a,b)=>a.name.localeCompare(b.name));
+ if(sort==="za")list.sort((a,b)=>b.name.localeCompare(a.name));
+ if(sort==="category")list.sort((a,b)=>category(a.category).name.localeCompare(category(b.category).name)||a.name.localeCompare(b.name));
+ $("toolGrid").replaceChildren();
+ list.forEach(t=>{
+  const card=document.createElement("article");card.className="tool";
+  const top=document.createElement("div");top.className="tooltop";
+  const ico=document.createElement("div");ico.className="toolicon";ico.textContent=t.icon;ico.setAttribute("aria-hidden","true");
+  const titlebox=document.createElement("div");titlebox.className="tooltitle";const h=document.createElement("h3");h.textContent=t.name;const small=document.createElement("small");small.textContent=category(t.category).name;titlebox.append(h,small);
+  const heart=document.createElement("button");heart.type="button";heart.className="heart"+(favorites.includes(t.name)?" saved":"");heart.textContent=favorites.includes(t.name)?"♥":"♡";heart.title="ذخیره یا حذف از علاقه‌مندی‌ها";heart.setAttribute("aria-label",heart.title);heart.addEventListener("click",()=>{favorites=favorites.includes(t.name)?favorites.filter(n=>n!==t.name):[...favorites,t.name];persist();renderTools();updateStats();toast(favorites.includes(t.name)?"به علاقه‌مندی‌ها اضافه شد":"از علاقه‌مندی‌ها حذف شد")});
+  top.append(ico,titlebox,heart);
+  const desc=document.createElement("p");desc.className="tool-desc";desc.textContent=t.desc;
+  const tags=document.createElement("div");tags.className="tags";const status=document.createElement("span");status.className="tag "+(t.status==="free"?"free":"limited");status.textContent=statusLabel(t);const cat=document.createElement("span");cat.className="tag";cat.textContent=category(t.category).name;tags.append(status,cat);
+  const foot=document.createElement("div");foot.className="toolfoot";const visit=document.createElement("a");visit.className="visit";visit.href=t.url;visit.target="_blank";visit.rel="noopener noreferrer";visit.textContent="سایت رسمی ↗";
+  const detail=document.createElement("button");detail.className="detail";detail.type="button";detail.textContent="معلومات";detail.addEventListener("click",()=>openTool(t));
+  const cmp=document.createElement("button");cmp.type="button";cmp.className="comparebtn"+(compare.includes(t.name)?" checked":"");cmp.textContent=compare.includes(t.name)?"✓ مقایسه":"⚖ مقایسه";cmp.title="افزودن به مقایسه";cmp.addEventListener("click",()=>toggleCompare(t.name));
+  foot.append(visit,detail,cmp);card.append(top,desc,tags,foot);$("toolGrid").appendChild(card);
+ });
+ $("resultCount").innerHTML=`نمایش <b>${new Intl.NumberFormat("fa-IR").format(list.length)}</b> از <b>${new Intl.NumberFormat("fa-IR").format(tools.length)}</b> ابزار`;
+ $("empty").style.display=list.length?"none":"block";$("toolGrid").style.display=list.length?"grid":"none";
+ $("compareStatus").textContent=`${compare.length} ابزار برای مقایسه انتخاب شده؛ حداکثر ۳ ابزار.`;
+ $("statFav").textContent=new Intl.NumberFormat("fa-IR").format(favorites.length);
+}
+function updateStats(){$("statTools").textContent=new Intl.NumberFormat("fa-IR").format(tools.length);$("statCats").textContent=new Intl.NumberFormat("fa-IR").format(categories.length);$("statFav").textContent=new Intl.NumberFormat("fa-IR").format(favorites.length)}
+function openTool(t){
+ modalTool=t;$("modalTitle").textContent=`${t.icon} ${t.name}`;$("modalBody").replaceChildren();
+ const lines=[
+ ["دسته‌بندی",category(t.category).name],
+ ["کاربرد",t.desc],
+ ["وضعیت طرح",statusLabel(t)],
+ ["یادداشت",t.note],
+ ["آدرس رسمی",t.url],
+ ["پیشنهاد", "پیش از استفاده، شرایط روز، حریم خصوصی، پشتیبانی زبان و محدودیت‌های حساب را در سایت رسمی بررسی کن."]
+ ];
+ lines.forEach(([label,value])=>{const p=document.createElement("p");const b=document.createElement("strong");b.textContent=label+" : ";p.append(b,document.createTextNode(value));$("modalBody").appendChild(p)});
+ $("modalVisit").href=t.url;$("modalFavorite").textContent=favorites.includes(t.name)?"♥ حذف از علاقه‌مندی‌ها":"♡ ذخیره در علاقه‌مندی‌ها";$("modal").classList.add("open");$("closeModal").focus();
+}
+function closeToolModal(){$("modal").classList.remove("open")}
+function toggleCompare(name){
+ if(compare.includes(name))compare=compare.filter(n=>n!==name);
+ else if(compare.length>=3){toast("برای مقایسه حداکثر ۳ ابزار انتخاب کن.");return}
+ else compare.push(name);
+ persist();renderTools();toast(compare.includes(name)?"برای مقایسه انتخاب شد":"از مقایسه حذف شد");
+}
+function showCompare(){
+ const selected=compare.map(n=>tools.find(t=>t.name===n)).filter(Boolean);
+ if(selected.length<2){toast("برای مقایسه، دست‌کم ۲ ابزار انتخاب کن.");return}
+ const table=document.createElement("table");table.style.cssText="width:100%;border-collapse:collapse;font-size:12px;margin-top:15px";
+ const rows=[["نام ابزار",...selected.map(t=>t.name)],["دسته‌بندی",...selected.map(t=>category(t.category).name)],["کاربرد",...selected.map(t=>t.desc)],["طرح رایگان",...selected.map(statusLabel)],["یادداشت",...selected.map(t=>t.note)],["سایت رسمی",...selected.map(t=>t.url)]];
+ rows.forEach((row,i)=>{const tr=document.createElement("tr");row.forEach((v,j)=>{const cell=document.createElement(i===0||j===0?"th":"td");cell.textContent=v;cell.style.cssText="text-align:right;vertical-align:top;padding:10px;border:1px solid var(--line);overflow-wrap:anywhere;min-width:90px";if(i===0||j===0)cell.style.color="var(--accent2)";if(i===5&&j>0){cell.textContent="";const a=document.createElement("a");a.href=v;a.target="_blank";a.rel="noopener noreferrer";a.textContent="بازکردن سایت ↗";a.style.color="var(--accent2)";cell.append(a)}tr.appendChild(cell)});table.appendChild(tr)});
+ const holder=$("compareBody");holder.replaceChildren();holder.style.overflowX="auto";holder.appendChild(table);$("compareModal").classList.add("open");$("closeCompare").focus();
+}
+function resetFilters(){activeCategory="all";activeFilter="all";$("searchInput").value="";$("categorySelect").value="all";$("sortSelect").value="featured";document.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b.dataset.filter==="all"));renderCategories();renderTools()}
+$("searchInput").addEventListener("input",renderTools);$("sortSelect").addEventListener("change",renderTools);$("categorySelect").addEventListener("change",()=>{activeCategory=$("categorySelect").value;renderCategories();renderTools()});
+document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{activeFilter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));renderTools()}));
+$("clearSearch").addEventListener("click",()=>{$("searchInput").value="";renderTools();$("searchInput").focus()});$("resetAll").addEventListener("click",resetFilters);$("emptyReset").addEventListener("click",resetFilters);
+$("favoritesTop").addEventListener("click",()=>{activeFilter="favorites";document.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b.dataset.filter==="favorites"));renderTools();$("tools").scrollIntoView({behavior:"smooth"})});
+$("surpriseBtn").addEventListener("click",()=>{const t=tools[Math.floor(Math.random()*tools.length)];openTool(t)});
+$("compareNow").addEventListener("click",showCompare);
+$("closeModal").addEventListener("click",closeToolModal);$("modal").addEventListener("click",e=>{if(e.target===$("modal"))closeToolModal()});
+$("closeCompare").addEventListener("click",()=>$("compareModal").classList.remove("open"));$("compareModal").addEventListener("click",e=>{if(e.target===$("compareModal"))$("compareModal").classList.remove("open")});
+$("modalFavorite").addEventListener("click",()=>{if(!modalTool)return;const n=modalTool.name;favorites=favorites.includes(n)?favorites.filter(x=>x!==n):[...favorites,n];persist();updateStats();$("modalFavorite").textContent=favorites.includes(n)?"♥ حذف از علاقه‌مندی‌ها":"♡ ذخیره در علاقه‌مندی‌ها";renderTools();toast("فهرست علاقه‌مندی‌ها به‌روزرسانی شد")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeToolModal();$("compareModal").classList.remove("open")}});
+$("themeBtn").addEventListener("click",()=>{const light=document.body.classList.toggle("light");$("themeBtn").textContent=light?"🌙":"☀️";try{localStorage.setItem(THEMEKEY,light?"light":"dark")}catch(e){}});
+try{if(localStorage.getItem(THEMEKEY)==="light"){document.body.classList.add("light");$("themeBtn").textContent="🌙"}}catch(e){}
+$("year").textContent=new Date().getFullYear();renderCategories();updateStats();renderTools();
+</script>
+</body>
+</html>
